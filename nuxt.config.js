@@ -15,7 +15,12 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   loading: { color: '#fff' },
-  css: [],
+  css: [
+    {
+      src: '~/assets/less/app.less',
+      lang: 'less'
+    }
+  ],
   plugins: [],
   modules: ['@nuxtjs/axios', '@nuxtjs/bulma'],
   axios: {
