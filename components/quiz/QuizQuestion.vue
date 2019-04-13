@@ -1,8 +1,8 @@
 <template>
-  <div v-observe-visibility="visibilityChanged" class="quiz-page__block">
+  <div class="quiz-page__block">
     <div class="field">
       <h1>{{ question.question }}</h1>
-      <div class="field-group">
+      <div v-observe-visibility="visibilityChanged" class="field-group">
         <div
           v-for="(answer, index) in question.answers"
           :key="index"
@@ -64,6 +64,7 @@ export default {
       if (answer === index) {
         this.answerClass = 'success-answer'
       } else this.answerClass = 'error-answer'
+      this.$emit('nextQuestionScroll', this.question.id + 1, true)
     },
     visibilityChanged(isVisible) {
       this.isVisible = isVisible

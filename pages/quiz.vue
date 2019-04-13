@@ -1,12 +1,14 @@
 <template>
   <div class="quiz-page">
     <div class="quiz-page__block">
-      <NameSelector />
+      <NameSelector @nextQuestionScroll="nextQuestionScroll" />
     </div>
     <QuizQuestion
       v-for="question in questions"
+      :id="`question-${question.id}`"
       :key="question.id"
       :question="question"
+      @nextQuestionScroll="nextQuestionScroll"
     />
   </div>
 </template>
@@ -29,16 +31,23 @@ export default {
       return this.$store.state.questions
     }
   },
-  watch: {
-    questions: {
-      handler(val) {
-        console.log(val)
-      }
-    }
-  },
   async fetch({ store }) {
     await store.dispatch('fetchQuestions')
   },
-  methods: {}
+  methods: {
+    nextQuestionScroll(index, timeout = false) {
+      if (index >= this.questions.length + 1) return
+      if (timeout) {
+        setTimeout(() => {
+          this.scroll(index)
+        }, 1300)
+      } else this.scroll(index)
+    },
+    scroll(index) {
+      this.$scrollTo(`#question-${index}`, 500, {
+        easing: 'ease-out'
+      })
+    }
+  }
 }
 </script>

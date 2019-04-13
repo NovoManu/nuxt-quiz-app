@@ -20,7 +20,8 @@
     "less-loader": "^4.1.0",
     "nuxt": "^2.4.0",
     "v-hotkey": "^0.3.0",
-    "vue-observe-visibility": "^0.4.3"
+    "vue-observe-visibility": "^0.4.3",
+    "vue-scrollto": "^2.15.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",

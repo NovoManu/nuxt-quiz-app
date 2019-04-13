@@ -21,8 +21,13 @@ export default {
       lang: 'less'
     }
   ],
-  plugins: ['~/plugins/api', '~/plugins/elements', '~/plugins/hotkey', '~/plugins/observer'],
-  modules: ['@nuxtjs/axios'],
+  plugins: [
+    '~/plugins/api',
+    '~/plugins/elements',
+    '~/plugins/hotkey',
+    '~/plugins/observer'
+  ],
+  modules: ['@nuxtjs/axios', 'vue-scrollto/nuxt'],
   axios: {
     baseUrl: 'http://localhost:3000',
     proxy: false
