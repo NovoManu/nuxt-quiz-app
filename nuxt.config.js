@@ -21,21 +21,11 @@ export default {
       lang: 'less'
     }
   ],
-  plugins: [],
+  plugins: ['~/plugins/api', '~/plugins/elements', '~/plugins/hotkey', '~/plugins/observer'],
   modules: ['@nuxtjs/axios'],
   axios: {
-    proxy: true,
-    proxyHeaders: true,
-    proxyHeadersIgnore: ['accept']
-  },
-  proxy: {
-    '/api': {
-      target: 'http://localhost:3000/',
-      changeOrigin: false,
-      pathRewrite: {
-        '^/api/': ''
-      }
-    }
+    baseUrl: 'http://localhost:3000',
+    proxy: false
   },
   build: {
     postcss: {

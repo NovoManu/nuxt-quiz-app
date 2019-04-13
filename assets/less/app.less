@@ -39,8 +39,7 @@ body {
 
 .start-page {
   .page-full;
-  display: none;
-
+  height: 100vh;
   img {
     width: 100%;
     max-width: 600px;
@@ -59,7 +58,7 @@ body {
   }
 }
 
-.questions-page {
+.quiz-page {
   min-height: 100vh;
   height: auto;
 
@@ -73,7 +72,7 @@ body {
 
     .field {
       width: 100%;
-      max-width: 600px;
+      max-width: 900px;
 
       &-text {
         display: block;
@@ -99,6 +98,10 @@ body {
         &:not(:focus) {
           box-shadow: rgba(28, 116, 188, 0.3) 0px 1px;
         }
+      }
+
+      h1 {
+        font-size: 2rem;
       }
     }
 
@@ -168,10 +171,26 @@ body {
         &.success-answer {
           background-color: @success;
           .success-animation;
+          .key {
+            background-color: @success;
+            width: 52px;
+            margin-left: -20px;
+            .invisible {
+              display: block;
+            }
+          }
         }
         &.error-answer {
           background-color: @error;
           .error-animation;
+          .key {
+            background-color: @error;
+            width: 52px;
+            margin-left: -20px;
+            .invisible {
+              display: block;
+            }
+          }
         }
       }
     }

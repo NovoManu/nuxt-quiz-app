@@ -2,20 +2,75 @@
   "questions": [
     {
       "id": 1,
-      "question": "json-server",
+      "question": "In which country does edelweiss not grow natively?",
       "answers": [
-        "Answer 1",
-        "Answer 2",
-        "Answer 3",
-        "Answer 4"
+        "Brazil",
+        "Japan",
+        "South Korea",
+        "Swaziland"
+      ]
+    },
+    {
+      "id": 2,
+      "question": "What is the only country through which both the equator and the Tropic of Capricorn pass?",
+      "answers": [
+        "Brazil",
+        "North Korea",
+        "South Korea",
+        "Bulgaria"
+      ]
+    },
+    {
+      "id": 3,
+      "question": "What country calls itself Nippon?",
+      "answers": [
+        "Russia",
+        "Germany",
+        "Argentina",
+        "Japan"
+      ]
+    },
+    {
+      "id": 4,
+      "question": "On which continent did our upright-walking ancestors originate?",
+      "answers": [
+        "North America",
+        "Africa",
+        "South America",
+        "Asia"
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Where was the greatest difference between annual high and low temperatures recorded?",
+      "answers": [
+        "Antarctica",
+        "Canada",
+        "Russia",
+        "Denmark"
       ]
     }
   ],
   "answers": [
     {
       "id": 1,
-      "question_id": 1,
-      "answer_index": 0
+      "answerIndex": 3
+    },
+    {
+      "id": 2,
+      "answerIndex": 0
+    },
+    {
+      "id": 3,
+      "answerIndex": 3
+    },
+    {
+      "id": 4,
+      "answerIndex": 1
+    },
+    {
+      "id": 5,
+      "answerIndex": 2
     }
   ],
   "results": {
