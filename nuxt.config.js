@@ -22,7 +22,7 @@ export default {
     }
   ],
   plugins: [],
-  modules: ['@nuxtjs/axios', '@nuxtjs/bulma'],
+  modules: ['@nuxtjs/axios'],
   axios: {
     proxy: true,
     proxyHeaders: true,

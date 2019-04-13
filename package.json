@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/bulma": "^1.2.1",
     "cross-env": "^5.2.0",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
