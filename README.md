@@ -6,7 +6,7 @@
 
 ``` bash
 # install json-server globally
-$ apt install -g json-server
+$ npm install -g json-server
 
 # install dependencies
 $ npm install
