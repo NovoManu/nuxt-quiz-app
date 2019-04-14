@@ -1,0 +1,42 @@
+@import "_all";
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 100%;
+  color: @primary;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.page-centered {
+  .flex-display(@display: flex);
+  .align-items(@align: center);
+  .justify-content(@justify: center);
+  width: calc(100vw - 4rem);
+  height: calc(100vh - 4rem);
+}
+
+.placeholder({
+  color: @secondary;
+  .opacity(@opacity: .6);
+});
+
+.container {
+  .flex-display(@display: flex);
+  box-sizing: border-box;
+  color: inherit;
+  font-size: 100%;
+  max-width: 100%;
+  background-color: @background;
+  min-height: 100vh;
+  height: auto;
+}
+img {
+  max-width: 100%;
+}
+.text-center {
+  text-align: center;
+}
+.padding {
+  padding: 2rem;
+}

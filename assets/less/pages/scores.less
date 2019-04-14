@@ -1,0 +1,42 @@
+@import "../utilities/_all";
+.scores-page {
+  .flex-display(@display: flex);
+  .align-items(@align: stretch);
+  .flex-wrap(@wrap: wrap);
+  width: 100%;
+
+  &__content {
+    .padding;
+    .flex(@columns: 1 1 auto);
+    .flex-display(@display: flex);
+    .align-items(@align: center);
+    .justify-content(@justify: center);
+    img {
+      width: 100px;
+      .pulse;
+    }
+  }
+
+  &__top-score {
+    background-color: @background-hover;
+    .flex(@columns: 0 0 300px);
+    .text-center;
+  }
+
+  @media @mobile {
+    &__top-score {
+      .flex(@columns: 1 1 100%);
+    }
+  }
+
+  .top-score__list{
+    &-item {
+      .flex-display(@display: flex);
+      .justify-content(@justify: space-between);
+      padding: 1rem;
+      &:not(:last-child) {
+        border-bottom: 1px solid @background;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import "../utilities/_all";
+.start-page {
+  .page-centered;
+  .padding;
+  img {
+    width: 600px;
+  }
+  &__content {
+    text-align: center;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  @media @mobile {
+    img {
+      width: 300px;
+    }
+    h1 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  @media @landscape {
+    img {
+      display: none;
+    }
+  }
+}
