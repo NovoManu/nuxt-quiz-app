@@ -2,7 +2,7 @@
   <div class="quiz-page__block">
     <div v-parallax="0.3" class="field">
       <h1>{{ question.question }}</h1>
-      <div v-observe-visibility="visibilityChanged" class="field-group">
+      <div class="field-group">
         <div
           v-for="(answer, index) in question.answers"
           :key="index"
@@ -14,6 +14,7 @@
             <span class="invisible">Key</span>
             <span class="visible">{{ keys[index] }}</span>
           </div>
+          <span v-if="index === 3" v-observe-visibility="visibilityChanged" />
           {{ answer }}
         </div>
       </div>
@@ -63,7 +64,11 @@ export default {
       )
       if (answer === index) {
         this.answerClass = 'success-answer'
-      } else this.answerClass = 'error-answer'
+        this.$store.commit('addAnswer', true)
+      } else {
+        this.answerClass = 'error-answer'
+        this.$store.commit('addAnswer', false)
+      }
       this.$emit('nextQuestionScroll', this.question.id + 1, true)
     },
     visibilityChanged(isVisible) {

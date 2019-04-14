@@ -73,9 +73,36 @@
       "answerIndex": 2
     }
   ],
-  "results": {
-    "id": 1,
-    "name": "username",
-    "results": 56
-  }
+  "results": [
+    {
+      "id": 1,
+      "name": "Manu",
+      "score": 100
+    },
+    {
+      "id": 2,
+      "name": "Kate",
+      "score": 47
+    },
+    {
+      "id": 3,
+      "name": "John",
+      "score": 39
+    },
+    {
+      "id": 4,
+      "name": "Andy",
+      "score": 56
+    },
+    {
+      "id": 5,
+      "name": "Mary",
+      "score": 87
+    },
+    {
+      "name": "New Player",
+      "score": 20,
+      "id": 6
+    }
+  ]
 }

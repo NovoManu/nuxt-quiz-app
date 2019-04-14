@@ -6,7 +6,7 @@ export default {
     port: 9000
   },
   head: {
-    title: pkg.name,
+    title: 'Quiz App',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -21,12 +21,18 @@ export default {
       lang: 'less'
     }
   ],
+  router: {
+    scrollBehavior: function(to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    }
+  },
   plugins: [
     '~/plugins/api',
     '~/plugins/elements',
     '~/plugins/hotkey',
     '~/plugins/observer',
-    '~/plugins/parallax'
+    '~/plugins/parallax',
+    '~/plugins/filters'
   ],
   modules: ['@nuxtjs/axios', 'vue-scrollto/nuxt'],
   axios: {
