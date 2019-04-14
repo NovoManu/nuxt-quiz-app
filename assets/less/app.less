@@ -29,9 +29,7 @@ body {
   color: inherit;
   font-size: 100%;
   .flex-display(@display: flex);
-  .flex(@columns: 1 0 100%);
   max-width: 100%;
-  padding: 24px;
   background-color: @background;
   min-height: 100vh;
   height: auto;
@@ -40,6 +38,7 @@ body {
 .start-page {
   .page-full;
   height: 100vh;
+  overflow: hidden;
   img {
     width: 100%;
     max-width: 600px;
@@ -59,13 +58,15 @@ body {
 }
 
 .quiz-page {
+  width: 100%;
+  max-width: 100vw;
   min-height: 100vh;
   height: auto;
+  background: url("../../static/img/bg.png")repeat;
 
   &__block {
-    width: 100%;
     height: calc(100vh - 58px);
-    padding-left: 26px;
+    padding: 50px;
     text-align: left;
     .flex-display(@display: flex);
     .align-items(@align: center);

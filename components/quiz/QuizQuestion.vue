@@ -1,6 +1,6 @@
 <template>
   <div class="quiz-page__block">
-    <div class="field">
+    <div v-parallax="0.3" class="field">
       <h1>{{ question.question }}</h1>
       <div v-observe-visibility="visibilityChanged" class="field-group">
         <div

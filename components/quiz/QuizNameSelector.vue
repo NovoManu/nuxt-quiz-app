@@ -1,5 +1,5 @@
 <template>
-  <div class="field">
+  <div v-parallax="0.3" class="field">
     <h1>Hey, what's your name?</h1>
     <input
       v-model="name"

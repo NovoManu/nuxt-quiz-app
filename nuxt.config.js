@@ -25,7 +25,8 @@ export default {
     '~/plugins/api',
     '~/plugins/elements',
     '~/plugins/hotkey',
-    '~/plugins/observer'
+    '~/plugins/observer',
+    '~/plugins/parallax'
   ],
   modules: ['@nuxtjs/axios', 'vue-scrollto/nuxt'],
   axios: {
